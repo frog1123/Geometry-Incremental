@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    background-color: #1d1d1d;
+}
+@font-face {
+    font-family: Roboto;
+    src: url('../assets/Roboto-Thin.ttf');
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Arial', monospace;
+    font-weight: 200;
+    color: white;
+    margin: 0;
+}
+h1 {
+    font-size: 60px;
+}
+h3 {
+    font-size: 25px;
+}
+h4 {
+    font-size: 18px;
+}
+.currency-grid {
+    display: grid;
+    width: max-content;
+    grid-template-columns: max-content max-content;
+}
+.triangle-icon {
+    content: url(../assets/svg/triangle.svg);
+}
+.icon-h1 {
+    width: 55px;
+    height: 55px;
+}
+.icon-h3 {
+    width: 23px;
+    height: 23px;
+}
+.icon-h4 {
+    width: 16.5px;
+    height: 16.5px;
+}
+.btn-can-afford {
+  border-color: #127a20;
+}
+.btn-can-afford:hover {
+  background-color: #5ac46733 !important;
+}
+.btn-cant-afford {
+  border-color: #c41f3d;
+}
+.btn-cant-afford:hover {
+  background-color: #b84b5f33 !important;
+}
