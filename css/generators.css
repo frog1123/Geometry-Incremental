@@ -1,10 +1,25 @@
+#gen-list {
+    width: 98%;
+}
 .gen-grid {
     display: grid;
-    grid-template-columns: max-content 15% auto 20%;
-    width: 95%;
+    border-radius: 10px;
+    padding: 5px;
+    grid-template-columns: 20% 10% 10% auto 20%;
     align-items: center;
 }
+.gen-grid-highlighted {
+    background-color: #47474733;
+}
 .gen-name {
+    padding-left: 5px;
+    justify-self: left;
+    font-weight: bold;
+}
+.gen-lvl {
+    justify-self: left;
+}
+.gen-mult {
     justify-self: left;
 }
 .gen-produce {

@@ -5,19 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mq.css">
+    <link rel="stylesheet" href="css/other.css">
     <link rel="stylesheet" href="css/generators.css">
     <title>Geometry Incremental</title>
 </head>
 <body>
     <center>
-        <div class="currency-grid"><h1 id="triangle-amount-txt">x</h1><img class="triangle-icon icon-h1"/></div>
+        <div class="currency-grid"><h1 id="triangle-amount-txt">x</h1><img class="triangle-icon icon-h1" style="vertical-align: top"/></div>
+        <h2 id="triangle-gain-txt-container" style="display: none">Gaining <span class="currency-grid" style="display: inline"><span id="triangle-gain-txt">x</span><img class="triangle-icon icon-h2" style="vertical-align: top"/></span>/s</h2>
+        <div>
+            <button id="tri-multiply-buy-btn" class="multiply-buy-btn"><h4 id="tri-multiply-buy-btn-txt">Cost: x</h4></button>
+            <button id="tri-multiply-buy-btn-max" class="multiply-buy-btn"><h4 id="tri-multiply-buy-btn-max-txt">Buy max (x)</h4></button>
+            <h4>Multiply production of all triangle generators by <span id="tri-multiply-effectiveness-txt" style="font-weight: bold">xx</span></h4>
+            <h4>Current multiplier: <span id="tri-multiply-current-mult-txt" style="font-weight: bold">xx</span></h4>
+        </div>
+        <div class="line" style="margin-top: 10px;"></div>
         <div id="gen-list">
             <div class="gen-grid">
                 <h3 class="gen-name">1st Triangle Generator</h3>
                 <h3 id="tri-gen-t1-lvl" class="gen-lvl">LVL x</h3>
-                <h3 class="gen-produce">Producing <span class="currency-grid" style="display: inline"><span id="tri-gen-t1-produce">0</span><img class="triangle-icon icon-h3" style="vertical-align: top"/></span>/s</h3>
+                <h3 id="tri-gen-t1-mult" class="gen-mult">(x) xx</h3>
+                <h3 class="gen-produce">Producing <span class="currency-grid" style="display: inline"><span id="tri-gen-t1-produce">x</span><img class="triangle-icon icon-h3" style="vertical-align: top"/></span>/s</h3>
                 <button id="tri-gen-t1-buy-btn" class="gen-buy-btn">
-                    <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t1-buy-btn-txt">0</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                    <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t1-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                </button>
+            </div>
+            <div class="gen-grid gen-grid-highlighted">
+                <h3 class="gen-name">2nd Triangle Generator</h3>
+                <h3 id="tri-gen-t2-lvl" class="gen-lvl">LVL x</h3>
+                <h3 id="tri-gen-t2-mult" class="gen-mult">(x) xx</h3>
+                <h3 class="gen-produce">Producing <span id="tri-gen-t2-produce">x</span> 1st Generators/s</h3>
+                <button id="tri-gen-t2-buy-btn" class="gen-buy-btn">
+                    <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t2-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
                 </button>
             </div>
         </div>
@@ -29,4 +49,5 @@
     <script src="js/important/ui.js"></script>
     <script src="js/important/loop.js"></script>
     <script src="js/triangleGenerators.js"></script>
+    <script src="js/multiplier.js"></script>
 </html>

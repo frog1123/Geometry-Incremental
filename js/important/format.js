@@ -9,7 +9,7 @@ function fv(value) {
         return (Math.trunc(value.m * 1000) / 1000).toFixed(3) + "e" + value.e.toLocaleString()
     }
     else if (value.layer === 1) return (Math.trunc(value.m * 1000) / 1000).toFixed(3) + "e" + value.e.toLocaleString()
-    else return (value.sign === -1 ? "-" : "") + "e".repeat(value.layer) + value.mag.toLocaleString()
+    else return (value.sign === -1 ? "-" : "") + "e".repeat(value.layer) + value.mag.toLocaleString(undefined, {minimumFractionDigits: 3,maximumFractionDigits: 3})
 }
 function fvnd(value) {
     if (isNaN(value.layer) || isNaN(value.sign) || isNaN(value.mag)) return "NaN";
@@ -22,5 +22,5 @@ function fvnd(value) {
         return value.m.toFixed(3) + "e" + value.e.toLocaleString()
     }
     else if (value.layer === 1) return value.m.toFixed(3) + "e" + value.e.toLocaleString()
-    else return (value.sign === -1 ? "-" : "") + "e".repeat(value.layer) + value.mag.toLocaleString()
+    else return (value.sign === -1 ? "-" : "") + "e".repeat(value.layer) + value.mag.toLocaleString(undefined, {minimumFractionDigits: 3,maximumFractionDigits: 3})
 }

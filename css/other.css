@@ -1,0 +1,9 @@
+.multiply-buy-btn {
+    height: 50px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #1d1d1d;
+    border-style: solid;
+    border-radius: 10px;
+}

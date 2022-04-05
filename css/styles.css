@@ -6,6 +6,9 @@ body {
     font-family: Roboto;
     src: url('../assets/Roboto-Thin.ttf');
 }
+button {
+    cursor: pointer;
+}
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'Arial', monospace;
     font-weight: 200;
@@ -14,6 +17,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 h1 {
     font-size: 60px;
+}
+h2 {
+    font-size: 35px;
 }
 h3 {
     font-size: 25px;
@@ -26,6 +32,12 @@ h4 {
     width: max-content;
     grid-template-columns: max-content max-content;
 }
+.line {
+  width: 98%;
+  height: 2px;
+  justify-self: center;
+  background-color: #4f5054;
+}
 .triangle-icon {
     content: url(../assets/svg/triangle.svg);
 }
@@ -33,13 +45,17 @@ h4 {
     width: 55px;
     height: 55px;
 }
+.icon-h2 {
+    width: 33px;
+    height: 33px;
+}
 .icon-h3 {
     width: 23px;
     height: 23px;
 }
 .icon-h4 {
-    width: 16.5px;
-    height: 16.5px;
+    width: 16.8px;
+    height: 16.8px;
 }
 .btn-can-afford {
   border-color: #127a20;
