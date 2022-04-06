@@ -3,12 +3,12 @@
 }
 .gen-grid {
     display: grid;
-    border-radius: 10px;
     padding: 5px;
     grid-template-columns: 20% 10% 10% auto 20%;
     align-items: center;
 }
 .gen-grid-highlighted {
+    border-radius: 10px;
     background-color: #47474733;
 }
 .gen-name {
