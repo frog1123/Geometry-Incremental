@@ -1,14 +1,17 @@
 #gen-list {
     width: 98%;
+    max-height: 550px;
+    overflow: scroll;
+}
+#gen-list::-webkit-scrollbar {
+    display: none;
 }
 .gen-grid {
     display: grid;
-    padding: 5px;
     grid-template-columns: 20% 10% 10% auto 20%;
     align-items: center;
 }
 .gen-grid-highlighted {
-    border-radius: 10px;
     background-color: #47474733;
 }
 .gen-name {
@@ -17,9 +20,11 @@
     font-weight: bold;
 }
 .gen-lvl {
+    margin: 0;
     justify-self: left;
 }
 .gen-mult {
+    margin: 0;
     justify-self: left;
 }
 .gen-produce {
@@ -32,4 +37,7 @@
     background-color: #1d1d1d;
     border-style: solid;
     border-radius: 10px;
+}
+.gen-buy-btn h4 {
+    margin: auto;
 }

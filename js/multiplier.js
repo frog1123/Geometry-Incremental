@@ -1,12 +1,11 @@
 var triangleMultiplierCanBuy = Decimal.floor(Decimal.log10(Decimal.fromComponents(1, player.triangleAmount.layer, player.triangleAmount.mag)).add(player.triangleAmount.mag / Math.pow(10, Math.floor(Math.log10(player.triangleAmount.mag))) > 1 ? 1 : 0).sub(Decimal.floor(Decimal.log10(Decimal.fromComponents(1, player.multiplier.triangle.cost.layer, player.multiplier.triangle.cost.mag)))))
 
 function updateTriangleMultiplierUI() {
-    tempMag()
     triangleMultiplierCanBuy = Decimal.floor(Decimal.log10(Decimal.fromComponents(1, player.triangleAmount.layer, player.triangleAmount.mag)).add(player.triangleAmount.mag / Math.pow(10, Math.floor(Math.log10(player.triangleAmount.mag))) > 1 ? 1 : 0).sub(Decimal.floor(Decimal.log10(Decimal.fromComponents(1, player.multiplier.triangle.cost.layer, player.multiplier.triangle.cost.mag)))))
 
     document.getElementById("tri-multiply-buy-btn-txt").innerHTML = `Cost: ${fv(player.multiplier.triangle.cost)}`
-    document.getElementById("tri-multiply-effectiveness-txt").innerHTML = `x${fv(player.multiplier.triangle.effectiveness)}`
-    document.getElementById("tri-multiply-current-mult-txt").innerHTML = `x${fv(player.multiplier.triangle.multiplier)}`
+    document.getElementById("tri-multiply-effectiveness-txt").innerHTML = `×${fv(player.multiplier.triangle.effectiveness)}`
+    document.getElementById("tri-multiply-current-mult-txt").innerHTML = `×${fv(player.multiplier.triangle.multiplier)}`
     if (player.triangleAmount.gte(player.multiplier.triangle.cost)) {
         document.getElementById("tri-multiply-buy-btn").classList.add("btn-can-afford")
         document.getElementById("tri-multiply-buy-btn").classList.remove("btn-cant-afford")

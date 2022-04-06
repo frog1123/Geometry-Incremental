@@ -12,13 +12,15 @@
 </head>
 <body>
     <center>
-        <div class="currency-grid"><h1 id="triangle-amount-txt">x</h1><img class="triangle-icon icon-h1" style="vertical-align: top"/></div>
-        <h2 id="triangle-gain-txt-container" style="display: none">Gaining <span class="currency-grid" style="display: inline"><span id="triangle-gain-txt">x</span><img class="triangle-icon icon-h2" style="vertical-align: top"/></span>/s</h2>
+        <div class="currency-grid"><h1 id="triangle-amount-txt" class="m0">x</h1><img class="triangle-icon icon-h1" style="vertical-align: top"/></div>
+        <h2 id="triangle-gain-txt-container" class="m0" style="display: none;">Gaining <span class="currency-grid" style="display: inline"><span id="triangle-gain-txt">x</span><img class="triangle-icon icon-h2" style="vertical-align: top"/></span>/s</h2>
         <div>
-            <button id="tri-multiply-buy-btn" class="multiply-buy-btn"><h4 id="tri-multiply-buy-btn-txt" style="display: inline">Cost: x</h4><img class="triangle-icon icon-h4" style="vertical-align: top"/></button>
-            <button id="tri-multiply-buy-btn-max" class="multiply-buy-btn"><h4 id="tri-multiply-buy-btn-max-txt">Buy max (x)</h4></button>
-            <h4>Multiply production of all triangle generators by <span id="tri-multiply-effectiveness-txt" style="font-weight: bold">xx</span></h4>
-            <h4>Current multiplier: <span id="tri-multiply-current-mult-txt" style="font-weight: bold">xx</span></h4>
+            <div class="multiply-btn-grid">
+                <button id="tri-multiply-buy-btn" class="multiply-buy-btn"><h4 id="tri-multiply-buy-btn-txt" style="display: inline">Cost: x</h4><img class="triangle-icon icon-h4"/></button>
+                <button id="tri-multiply-buy-btn-max" class="multiply-buy-btn"><h4 id="tri-multiply-buy-btn-max-txt" style="display: inline">Buy max (x)</h4></button>
+            </div>
+            <h4 class="m0">Multiply production of all triangle generators by <span id="tri-multiply-effectiveness-txt" style="font-weight: bold">×x</span></h4>
+            <h4 class="m0">Current multiplier: <span id="tri-multiply-current-mult-txt" style="font-weight: bold">×x</span></h4>
         </div>
         <div class="line" style="margin-top: 10px;"></div>
         <div id="gen-list">
@@ -26,10 +28,10 @@
                 <div class="gen-grid">
                     <h3 class="gen-name">1st Triangle Generator</h3>
                     <h3 id="tri-gen-t1-lvl" class="gen-lvl">LVL x</h3>
-                    <h3 id="tri-gen-t1-mult" class="gen-mult">(x) xx</h3>
+                    <h3 id="tri-gen-t1-mult" class="gen-mult">(x) ×x</h3>
                     <h3 class="gen-produce">Producing <span class="currency-grid" style="display: inline"><span id="tri-gen-t1-produce">x</span><img class="triangle-icon icon-h3" style="vertical-align: top"/></span>/s</h3>
                     <button id="tri-gen-t1-buy-btn" class="gen-buy-btn">
-                        <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t1-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                        <h4 style="align-self: center;">Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t1-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
                     </button>
                 </div>
             </div>
@@ -37,14 +39,81 @@
                 <div class="gen-grid">
                     <h3 class="gen-name">2nd Triangle Generator</h3>
                     <h3 id="tri-gen-t2-lvl" class="gen-lvl">LVL x</h3>
-                    <h3 id="tri-gen-t2-mult" class="gen-mult">(x) xx</h3>
+                    <h3 id="tri-gen-t2-mult" class="gen-mult">(x) ×x</h3>
                     <h3 class="gen-produce">Producing <span id="tri-gen-t2-produce">x</span> 1st Generators/s</h3>
                     <button id="tri-gen-t2-buy-btn" class="gen-buy-btn">
                         <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t2-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
                     </button>
                 </div>
             </div>
+            <div id="tri-gen-t3-container">
+                <div class="gen-grid">
+                    <h3 class="gen-name">3rd Triangle Generator</h3>
+                    <h3 id="tri-gen-t3-lvl" class="gen-lvl">LVL x</h3>
+                    <h3 id="tri-gen-t3-mult" class="gen-mult">(x) ×x</h3>
+                    <h3 class="gen-produce">Producing <span id="tri-gen-t3-produce">x</span> 2nd Generators/s</h3>
+                    <button id="tri-gen-t3-buy-btn" class="gen-buy-btn">
+                        <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t3-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                    </button>
+                </div>
+            </div>
+            <div id="tri-gen-t4-container" class="gen-grid-highlighted">
+                <div class="gen-grid">
+                    <h3 class="gen-name">4th Triangle Generator</h3>
+                    <h3 id="tri-gen-t4-lvl" class="gen-lvl">LVL x</h3>
+                    <h3 id="tri-gen-t4-mult" class="gen-mult">(x) ×x</h3>
+                    <h3 class="gen-produce">Producing <span id="tri-gen-t4-produce">x</span> 3rd Generators/s</h3>
+                    <button id="tri-gen-t4-buy-btn" class="gen-buy-btn">
+                        <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t4-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                    </button>
+                </div>
+            </div>
+            <div id="tri-gen-t5-container">
+                <div class="gen-grid">
+                    <h3 class="gen-name">5th Triangle Generator</h3>
+                    <h3 id="tri-gen-t5-lvl" class="gen-lvl">LVL x</h3>
+                    <h3 id="tri-gen-t5-mult" class="gen-mult">(x) ×x</h3>
+                    <h3 class="gen-produce">Producing <span id="tri-gen-t5-produce">x</span> 4th Generators/s</h3>
+                    <button id="tri-gen-t5-buy-btn" class="gen-buy-btn">
+                        <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t5-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                    </button>
+                </div>
+            </div>
+            <div id="tri-gen-t6-container" class="gen-grid-highlighted">
+                <div class="gen-grid">
+                    <h3 class="gen-name">6th Triangle Generator</h3>
+                    <h3 id="tri-gen-t6-lvl" class="gen-lvl">LVL x</h3>
+                    <h3 id="tri-gen-t6-mult" class="gen-mult">(x) ×x</h3>
+                    <h3 class="gen-produce">Producing <span id="tri-gen-t6-produce">x</span> 5th Generators/s</h3>
+                    <button id="tri-gen-t6-buy-btn" class="gen-buy-btn">
+                        <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t6-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                    </button>
+                </div>
+            </div>
+            <div id="tri-gen-t7-container">
+                <div class="gen-grid">
+                    <h3 class="gen-name">7th Triangle Generator</h3>
+                    <h3 id="tri-gen-t7-lvl" class="gen-lvl">LVL x</h3>
+                    <h3 id="tri-gen-t7-mult" class="gen-mult">(x) ×x</h3>
+                    <h3 class="gen-produce">Producing <span id="tri-gen-t7-produce">x</span> 6th Generators/s</h3>
+                    <button id="tri-gen-t7-buy-btn" class="gen-buy-btn">
+                        <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t7-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                    </button>
+                </div>
+            </div>
+            <div id="tri-gen-t8-container" class="gen-grid-highlighted">
+                <div class="gen-grid">
+                    <h3 class="gen-name">8th Triangle Generator</h3>
+                    <h3 id="tri-gen-t8-lvl" class="gen-lvl">LVL x</h3>
+                    <h3 id="tri-gen-t8-mult" class="gen-mult">(x) ×x</h3>
+                    <h3 class="gen-produce">Producing <span id="tri-gen-t8-produce">x</span> 7th Generators/s</h3>
+                    <button id="tri-gen-t8-buy-btn" class="gen-buy-btn">
+                        <h4>Cost: <span class="currency-grid" style="display: inline"><span id="tri-gen-t8-buy-btn-txt">x</span><img class="triangle-icon icon-h4" style="vertical-align: top"/></span></h4>
+                    </button>
+                </div>
+            </div>
         </div>
+        <div class="line" style="margin-bottom: 10px;"></div>
     </center>
 </body>
     <script src="js/important/break_eternity.js"></script>
