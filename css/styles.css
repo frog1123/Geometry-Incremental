@@ -2,10 +2,6 @@ body {
     margin: 0;
     background-color: #1d1d1d;
 }
-@font-face {
-    font-family: Roboto;
-    src: url('../assets/Roboto-Thin.ttf');
-}
 button {
     cursor: pointer;
 }

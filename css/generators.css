@@ -6,13 +6,13 @@
 #gen-list::-webkit-scrollbar {
     display: none;
 }
+.tri-gen-container:nth-child(even) {
+    background-color: #47474733;
+}
 .gen-grid {
     display: grid;
     grid-template-columns: 20% 10% 10% auto 20%;
     align-items: center;
-}
-.gen-grid-highlighted {
-    background-color: #47474733;
 }
 .gen-name {
     padding-left: 5px;

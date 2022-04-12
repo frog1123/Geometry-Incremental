@@ -1,6 +1,6 @@
 .multiply-buy-btn {
     height: 50px;
-    width: 100%;
+    width: 95%;
     margin-top: 10px;
     margin-bottom: 5px;
     background-color: #1d1d1d;
@@ -12,4 +12,25 @@
     width: 400px;
     grid-gap: 5px;
     grid-template-columns: 50% 50%;
+}
+#prestige-grid {
+    padding: 10px;
+    display: grid;
+    width: max-content;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+}
+#prestige-grid::-webkit-scrollbar {
+    display: none;
+}
+.prestige-btn-container {
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+.prestige-btn {
+    height: 100px;
+    width: 400px;
+    background-color: #1d1d1d;
+    border-style: solid;
+    border-radius: 10px;
 }

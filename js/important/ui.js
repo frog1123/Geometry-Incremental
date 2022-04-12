@@ -6,7 +6,8 @@ function updateUI() {
     document.getElementById("triangle-gain-txt").innerHTML = fv(player.generators.triangle.tier1.lvl.mul(player.generators.triangle.tier1.multiplier))
 
     updateTriangleMultiplierUI()
-    
+    updateTriangleFactoryUI()
+
     updateTriangleGeneratorUI(1)
     updateTriangleGeneratorUI(2)
     updateTriangleGeneratorUI(3)
@@ -47,4 +48,7 @@ document.getElementById("tri-multiply-buy-btn").onclick = function() {
 }
 document.getElementById("tri-multiply-buy-btn-max").onclick = function() { 
     buyTriangleMultiplierMax()
+}
+document.getElementById("tri-triangle-factory-btn").onclick = function() {
+    upgradeTriangleFactory()
 }

@@ -25,7 +25,7 @@
         </div>
         <div class="line" style="margin-top: 10px;"></div>
         <div id="gen-list">
-            <div id="tri-gen-t1-container">
+            <div id="tri-gen-t1-container" class="tri-gen-container">
                 <div class="gen-grid">
                     <h3 class="gen-name">1st Triangle Generator</h3>
                     <h3 id="tri-gen-t1-lvl" class="gen-lvl">LVL x</h3>
@@ -36,7 +36,7 @@
                     </button>
                 </div>
             </div>
-            <div id="tri-gen-t2-container" class="gen-grid-highlighted">
+            <div id="tri-gen-t2-container" class="tri-gen-container">
                 <div class="gen-grid">
                     <h3 class="gen-name">2nd Triangle Generator</h3>
                     <h3 id="tri-gen-t2-lvl" class="gen-lvl">LVL x</h3>
@@ -47,7 +47,7 @@
                     </button>
                 </div>
             </div>
-            <div id="tri-gen-t3-container">
+            <div id="tri-gen-t3-container" class="tri-gen-container">
                 <div class="gen-grid">
                     <h3 class="gen-name">3rd Triangle Generator</h3>
                     <h3 id="tri-gen-t3-lvl" class="gen-lvl">LVL x</h3>
@@ -58,7 +58,7 @@
                     </button>
                 </div>
             </div>
-            <div id="tri-gen-t4-container" class="gen-grid-highlighted">
+            <div id="tri-gen-t4-container" class="tri-gen-container">
                 <div class="gen-grid">
                     <h3 class="gen-name">4th Triangle Generator</h3>
                     <h3 id="tri-gen-t4-lvl" class="gen-lvl">LVL x</h3>
@@ -69,7 +69,7 @@
                     </button>
                 </div>
             </div>
-            <div id="tri-gen-t5-container">
+            <div id="tri-gen-t5-container" class="tri-gen-container" style="display: none">
                 <div class="gen-grid">
                     <h3 class="gen-name">5th Triangle Generator</h3>
                     <h3 id="tri-gen-t5-lvl" class="gen-lvl">LVL x</h3>
@@ -80,7 +80,7 @@
                     </button>
                 </div>
             </div>
-            <div id="tri-gen-t6-container" class="gen-grid-highlighted">
+            <div id="tri-gen-t6-container" class="tri-gen-container" style="display: none">
                 <div class="gen-grid">
                     <h3 class="gen-name">6th Triangle Generator</h3>
                     <h3 id="tri-gen-t6-lvl" class="gen-lvl">LVL x</h3>
@@ -91,7 +91,7 @@
                     </button>
                 </div>
             </div>
-            <div id="tri-gen-t7-container">
+            <div id="tri-gen-t7-container" class="tri-gen-container" style="display: none">
                 <div class="gen-grid">
                     <h3 class="gen-name">7th Triangle Generator</h3>
                     <h3 id="tri-gen-t7-lvl" class="gen-lvl">LVL x</h3>
@@ -102,7 +102,7 @@
                     </button>
                 </div>
             </div>
-            <div id="tri-gen-t8-container" class="gen-grid-highlighted">
+            <div id="tri-gen-t8-container" class="tri-gen-container" style="display: none">
                 <div class="gen-grid">
                     <h3 class="gen-name">8th Triangle Generator</h3>
                     <h3 id="tri-gen-t8-lvl" class="gen-lvl">LVL x</h3>
@@ -115,6 +115,26 @@
             </div>
         </div>
         <div class="line" style="margin-bottom: 10px;"></div>
+        <div id="prestige-grid">
+            <div class="prestige-btn-container">
+                <h2 style="margin: 0">Triangle Factory (<span id="triangle-factory-amount-txt">x</span>) </h2>
+                <h4 style="margin-top: 0; margin-bottom: 3px;">Requires <span id="triangle-factory-req-txt">x xth</span> Triangle Generators</h4>
+                <button id="tri-triangle-factory-btn" class="prestige-btn">
+                    <h4>
+                        Local Reset to <span id="tri-triangle-factory-gen">unlock x th Generator and</span> give all triangle generators a ×<span id="tri-triangle-factory-mult">x</span> multiplier
+                    </h4>
+                </button>
+            </div>
+            <div class="prestige-btn-container">
+                <h2 style="margin: 0">Triangle Dimension (<span id="triangle-dimension-amount-txt">x</span>) </h2>
+                <h4 style="margin-top: 0; margin-bottom: 3px;">Requires <span id="triangle-dimension-req-txt">x</span> Triangle Factories</h4>
+                <button id="tri-triangle-dimension-btn" class="prestige-btn">
+                    <h4>
+                        Global Reset to increase power of multiplier upgrade by <span id="tri-triangle-dimension-mult">x</span>%
+                    </h4>
+                </button>
+            </div>
+        </div>
     </center>
 </body>
     <script src="js/important/break_eternity.js"></script>
@@ -122,6 +142,7 @@
     <script src="js/important/format.js"></script>
     <script src="js/important/ui.js"></script>
     <script src="js/important/loop.js"></script>
+    <script src="js/important/reset.js"></script>
     <script src="js/triangleGenerators.js"></script>
     <script src="js/multiplier.js"></script>
 </html>
